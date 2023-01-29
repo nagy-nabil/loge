@@ -10,14 +10,22 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:loge.helloWorld"
+    "onCommand:loge.loge"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "loge.helloWorld",
-        "title": "Hello World"
+        "command": "loge.loge",
+        "title": "Loge"
+      }
+    ],
+    "keybindings":[
+      {
+        "command": "loge.loge",
+        "key": "ctrl+alt+l",
+        "mac": "cmd+l",
+        "when": "activeEditorIsNotPreview"
       }
     ]
   },
