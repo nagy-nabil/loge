@@ -1,8 +1,9 @@
 {
   "name": "loge",
-  "displayName": "loge",
-  "description": "",
+  "displayName": "Loge",
+  "description": "LOGE is an extension to make repeted logging for js/ts/rust(console.log, println!)  just a little bit easier",
   "version": "0.0.1",
+  "publisher": "nagy-nabil",
   "engines": {
     "vscode": "^1.74.0"
   },
