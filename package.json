@@ -2,13 +2,13 @@
   "name": "loge",
   "displayName": "Loge",
   "description": "LOGE is an extension to make repeted logging for js/ts/rust(console.log, println!)  just a little bit easier",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "nagy-nabil",
   "repository": {
     "type": "git",
     "url": "https://github.com/nagy-nabil/loge"
   },
-  "icon": "/images/log.png",
+  "icon": "images/log.png",
   "engines": {
     "vscode": "^1.74.0"
   },
