@@ -25,7 +25,9 @@ export function activate(context: vscode.ExtensionContext) {
         if (
             langId !== "javascript" &&
             langId !== "typescript" &&
-            langId !== "rust"
+            langId !== "rust" &&
+            langId !== "typescriptreact" &&
+            langId !== "javascriptreact"
         ) {
             return;
         }
@@ -54,10 +56,10 @@ export function activate(context: vscode.ExtensionContext) {
                 langId === "rust"
                     ? `println!("🪵 file \\"${fName}\\" ~ line \\"${
                         position.line + 1
-                    }\\" ~ token ~ ${token} = {${token}}");`
+                    }\\" ~ token ~ \\x1b[0;32m${token}\\x1b[0m = {}", ${token});`
                     : `console.log("🪵 file \\"${fName}\\" ~  line \\"${
                         position.line + 1
-                    }\\" ~ token ~ ${token} = ", ${token});`;
+                    }\\" ~ token ~ \\x1b[0;32m${token}\\x1b[0m = ", ${token});`;
             editor.insert(insertPos, `${newInsert}`);
         });
     });
