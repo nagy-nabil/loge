@@ -2,7 +2,7 @@
   "name": "loge",
   "displayName": "Loge",
   "description": "LOGE is an extension to make repeted logging for js/ts/rust(console.log, println!)  just a little bit easier",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "nagy-nabil",
   "repository": {
     "type": "git",
