@@ -43,7 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
         if (range !== undefined) {
             token = document.getText(range);
         } else {
-            return ;
+            return;
         }
         // use built in command to add new line down just easir than managing the new line myself
         await vscode.commands.executeCommand("editor.action.insertLineAfter");
@@ -54,12 +54,12 @@ export function activate(context: vscode.ExtensionContext) {
             const fName = path.basename(document.fileName);
             const newInsert =
                 langId === "rust"
-                    ? `println!("🪵 file \\"${fName}\\" ~ line \\"${
+                    ? `println!("🪵 [${fName}:${
                         position.line + 1
-                    }\\" ~ token ~ \\x1b[0;32m${token}\\x1b[0m = {}", ${token});`
-                    : `console.log("🪵 file \\"${fName}\\" ~  line \\"${
+                    }]~ token ~ \\x1b[0;32m${token}\\x1b[0m = {}", ${token});`
+                    : `console.log("🪵 [${fName}:${
                         position.line + 1
-                    }\\" ~ token ~ \\x1b[0;32m${token}\\x1b[0m = ", ${token});`;
+                    }] ~ token ~ \\x1b[0;32m${token}\\x1b[0m = ", ${token});`;
             editor.insert(insertPos, `${newInsert}`);
         });
     });
